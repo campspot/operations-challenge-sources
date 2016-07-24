@@ -1,0 +1,10 @@
+server:
+  rootPath: /api/v2
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+statusMessage: "working"
