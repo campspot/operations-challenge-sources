@@ -8,11 +8,11 @@ These files live in `/client`.
 ## NodeJS Server
 This is an express service that lives in `/node`.
 
-### Prerequsites
+### Prerequisites
  * NodeJS version 4.2
  * NPM
  
-### Preperation
+### Preparation
  * To install dependencies for the NodeJS app, you need to run `npm install`
  
 ### Running
@@ -22,11 +22,11 @@ This is an express service that lives in `/node`.
 ## Java Server
 This is an Dropwizard service that lives in `/java`.
 
-### Prerequsites
+### Prerequisites
  * Java 1.8
  * Maven 3
  
-### Preperation
+### Preparation
  * To install dependencies for the Java app and compile it, you need to run `mvn package`
  
 ### Running
