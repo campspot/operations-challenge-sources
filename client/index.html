@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Document</title>
+        <script
+            src="https://code.jquery.com/jquery-3.1.0.js"
+            integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>Campspot API Status</h1>
+
+        <h2>NodeJS</h2>
+        <p class="node">N/A</p>
+
+        <h2>Java</h2>
+        <p class="java">N/A</p>
+
+        <script type="text/javascript">
+         setInterval(function () {
+             $.getJSON("/api/v1/status")
+              .then(function (data) {
+                  $(".node").html(data.status);
+              }, function (error) {
+                  $(".node").html("Error");
+              });
+
+             $.getJSON("/api/v2/status")
+              .then(function (data) {
+                  $(".java").html(data.status);
+              }, function (error) {
+                  $(".java").html("Error");
+              });
+         }, 1000);
+        </script>
+    </body>
+</html>
