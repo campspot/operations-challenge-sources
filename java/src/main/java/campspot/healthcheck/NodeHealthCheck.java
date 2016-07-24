@@ -16,7 +16,7 @@ public class NodeHealthCheck extends HealthCheck {
 
     @Override
     protected Result check() throws Exception {
-        client.target(String.format("http://%s:%d/api/v1/status", nodeConfig.getHost(), nodeConfig.getPort()))
+        client.target(String.format("http://%s:%d/status", nodeConfig.getHost(), nodeConfig.getPort()))
             .request()
             .get();
 

@@ -1,12 +1,12 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-app.get('/api/v1/status', function (req, res) {
+app.get('/status', (req, res) => {
   res.json({
     status: "working"
   });
 });
 
-app.listen(3000, function () {
+app.listen(3000, () => {
   console.log('App listening on port 3000');
 });
