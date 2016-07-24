@@ -8,9 +8,11 @@ import io.dropwizard.client.JerseyClientBuilder;
 import io.dropwizard.setup.Environment;
 
 import javax.ws.rs.client.Client;
+import java.util.Arrays;
 
 public class App extends Application<SimpleConfig> {
     public static void main(String[] args) throws Exception {
+        Arrays.stream(args).forEach(System.out::println);
         new App().run(args);
     }
 
