@@ -8,3 +8,11 @@ server:
       port: 8081
 
 statusMessage: "working"
+
+jerseyClient:
+  timeout: 1m
+  connectionRequestTimeout: 1m
+
+nodeConfig:
+    host: "localhost"
+    port: 3000
