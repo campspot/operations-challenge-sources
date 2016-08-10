@@ -1,19 +1,20 @@
 'use strict';
 
 const express = require('express');
+const winston = require('winston');
+const expressWinston = require('express-winston');
+
 const app = express();
 
-let correctVersion = false;
+const logger = expressWinston.logger({
+  transports: [
+    new winston.transports.Console({
+      colorize: true
+    })
+  ]
+});
 
-try {
-  console.timeEnd("foo");
-} catch (e) {
-  correctVersion = true;
-}
-
-if (!correctVersion) {
-  throw new Error("Application failed to start");
-}
+app.use(logger);
 
 app.get('/status', (req, res) => {
   res.json({
